@@ -16,18 +16,8 @@ public class Main {
         PropertyConfigurator.configure("log4j.properties");
         StudentDao studentDao = new StudentDaoImpl();
         CityDao cityDao = new CityDaoImpl();
-/*        Student student = studentDao.getStudentById(5);
-        System.out.println(student);
 
-        student.setName("Mikhail");
-        student.setFamilyName("Nekhoroshev");
-        studentDao.update(student);*/
-
-        //studentDao.deleteStudentById(12);
-        //City city = new City(7,"Madrid",1900000);
-        //cityDao.addCity(city);
-        //System.out.println(cityDao.getCityById(4));
         Student student = new Student(0, "Alexander", "Block", 31, "qlogbwefoew", new City(0, "Moscow", 20_000_000));
-        System.out.println(studentDao.getStudentById(4));
+        myLogger.info(studentDao.getStudentById(4));
     }
 }
